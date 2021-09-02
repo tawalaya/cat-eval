@@ -29,7 +29,7 @@ In the `functions` folder, we collect a set of functions that can be used to eva
 
 # Compositions
 
-In the `compositions folder, we collect composition templates and generators. See the Readme in `compositions/` for more details on generating arbitrary complex function compositions for AWS StepFunctions.
+In the `compositions` folder, we collect composition templates and generators. See the Readme in `compositions/` for more details on generating arbitrary complex function compositions for AWS StepFunctions.
 
 ## Acknolagements
 
