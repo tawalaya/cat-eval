@@ -1,0 +1,51 @@
+{
+    "name":"UCC_Workload",
+    "functions":[
+        {
+            "name":"F1",
+            "type":"lloyd",
+            "params":{
+                "OPSIZE":10000,
+                "ITTER":1000,
+                "DEPTH":20,
+                "NAME":"F3"
+            }
+        },
+        {
+            "name":"F2",
+            "type":"lloyd",
+            "params":{
+                "OPSIZE":100000,
+                "ITTER":10000,
+                "DEPTH":20,
+                "NAME":"F2"
+            }
+        },
+        {
+            "name":"text2speech",
+            "type":"text2speech",
+            "params":{}
+        }
+        
+    ],
+    "flow": [
+        {
+            "function":"F1",
+            "repeat":"1"
+        },
+        [
+          {
+            "function":"F2",
+            "repeat":"sf % 3"
+          },  
+          {
+              "function":"text2speech",
+              "repeat":"sf"
+          }
+        ],
+        {
+            "function":"F1",
+            "repeat":"1"
+        }
+    ]
+}
