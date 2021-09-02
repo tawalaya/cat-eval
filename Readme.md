@@ -1,12 +1,17 @@
-# SERVERLESS CONFIGURATION METHOD EXPERIMENTES
+# SERVERLESS CONFIGURATION METHOD EXPERIMENTS
 
-This reposetory contains a set of tools to evalaute serverless configuration methods including functions, function-compostions data.
+This repository contains a set of tools to evaluate serverless configuration methods, including functions, function-compositions data.
 
-PR's for new functions or compostions wellcome.
+PR's for new functions and composition generators are welcome.
+
 
 # Sampling 
 
-To sample you can define a workload file using the following syntax:
+The sampling can collect input data to train sizing methods or generate a validation set using exhaustive search. 
+The sampling generator is configurable to allow for the collection of both.
+
+
+To sample, you can define a workload file using the following syntax:
 ```
 {
   "name": "EXPERIMENT_NAME",
@@ -19,10 +24,13 @@ To sample you can define a workload file using the following syntax:
 Using `python bench.py <workload-file> <vendor> <function>` you can start collecting samples for each deployment. 
 All data is collected in `data/EXPERIMENT_NAME_<DATE>.csv`
 
+# Functions
+In the `functions` folder, we collect a set of functions that can be used to evaluate sizing methods. These functions are also used by the composition generator to create complex, composed serverless functions. See the Readme in the folder for more information.
+
 # Compositions
 
-See the Readme in Compositions to generate abitray complex function compostions for AWS StepFunctions.
+In the `compositions folder, we collect composition templates and generators. See the Readme in `compositions/` for more details on generating arbitrary complex function compositions for AWS StepFunctions.
 
 ## Acknolagements
 
-This work is part of a paper currenlty under review at UCC 2021.
+This work is part of a paper currently under review at UCC 2021.

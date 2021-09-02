@@ -1,6 +1,6 @@
 # Functions
 
-Each folder contains a synsetic serverless function with a know performance profile.
+Each folder contains a synthetic serverless function with a know performance profile.
 
 ## Requrimetnes
  - python3.7+
@@ -16,20 +16,20 @@ Each folder contains a synsetic serverless function with a know performance prof
 
 ## Usage
 
-For deployment of each function, go into the folder of the given function, set envorment variables as needed and run `make <VENDOR>` where VENDOR can be `AWS or GCF`. 
+For deployment of each function, go into the folder of the given function, set environment variables as needed and run `make <VENDOR>` where VENDOR can be `AWS or GCF`. 
 
-For cleanup run `make clean`, this will always undeploy both aws and gcf.
+For cleanup run `make clean`, this will always undeploy both AWS and GCF.
 
 ## Functions
 
 ### Lloyd
-This function is inspiered by Lloyd et al.<sup>[1](#cite1)</sup> an can exsibit either CPU or memory intensive workloads by tuning the variables `OPSIZE, ITTER,DEPTH` of the deployment.
+This function is inspired by Lloyd et al.<sup>[1](#cite1)</sup> and can exhibit either CPU or memory-intensive workloads by tuning the variables `OPSIZE, ITTER, DEPTH` of the deployment.
 
 ### Prime
-This function implements a primality test function using the Sieve of Eratosthenes algorithm<sup>[2](#cite2)</sup> in Node.js 14 without any dependencies. It is good for mildy stessing a CPU while consuming time based on the size of the input number.
+This function implements a primality test function using the Sieve of Eratosthenes algorithm<sup>[2](#cite2)</sup> in Node.js 14 without any dependencies. It is good for mildly stressing a CPU while consuming time-based on the size of the input number.
 
 ### Text2Speech
-This function converts a provided text into speech using the `gtts` libary. A similar function has been used by Eisman et al.<sup>[3](#cite3)</sup>. This functions writes the generated mp3 to a cloud object store, you can configure the bucket-name using the `BUCKET` variable.
+This function converts a provided text into speech using the `gtts` library. A similar function has been used by Eisman et al.<sup>[3](#cite3)</sup>. This function writes the generated mp3 to a cloud object-store. You can configure the bucket name using the `BUCKET` variable.
 
 
 # References

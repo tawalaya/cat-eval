@@ -24,7 +24,7 @@ The `stepGeneraor` generates AWS StepFunctiuon Configurations based on a scaling
             "function":"<function-name from above>",
             "repeat":"<any numeric expresion, sf variable availibe>"
         },
-        #for a parallel setp use a json list
+        #for a parallel setup use a JSON list
         [
            {
             "function":"<function-name from above>",
@@ -35,7 +35,7 @@ The `stepGeneraor` generates AWS StepFunctiuon Configurations based on a scaling
 }
 ```
 
-The following example will generate a configuration based on the following image, consiting of two lloyd functions and a text2speech function.
+The following example will generate a configuration based on the following image with two Lloyd functions and a text2speech function in compostion.
 
 ![Figure1](example.jpg)
 
