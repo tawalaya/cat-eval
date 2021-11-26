@@ -33,4 +33,4 @@ In the `compositions` folder, we collect composition templates and generators. S
 
 ## Acknolagements
 
-This work is part of a paper currently under review at UCC 2021.
+This work is part of a paper currently under review at Caise 2021.
